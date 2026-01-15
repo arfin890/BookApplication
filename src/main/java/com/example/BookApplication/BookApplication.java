@@ -15,7 +15,6 @@ public class BookApplication extends SpringBootServletInitializer {
 
 	public static void main(String[] args) {
 		SpringApplication.run(BookApplication.class, args);
-		System.out.println("hi this is for jenkis");
 		System.out.println("Hi first commit");
 	}
 
