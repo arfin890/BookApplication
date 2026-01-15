@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/book/v1")
 public class BookController {
@@ -27,6 +29,12 @@ public class BookController {
     {
 
         return ResponseEntity.ok(bService.getBook(id));
+    }
+
+    @GetMapping("/getAll")
+    public ResponseEntity<List<Book>> getAll()
+    {
+        return ResponseEntity.ok(bService.getAll());
     }
 
 }
